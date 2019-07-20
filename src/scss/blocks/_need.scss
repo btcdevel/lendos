@@ -1,0 +1,42 @@
+.need {
+    background: $grey_bg;
+    @include desktop-1024 {
+        height: 772px;
+    }
+
+    &__wrapper{
+        padding-top: 58px;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 22px;
+    }
+
+    &__items-wrapper {
+        display: flex;
+        flex-direction: column;
+        @include desktop-1024 {
+            flex-direction: row;
+            justify-content: flex-start;
+
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        height: 234px;
+        margin-bottom: 24px;
+        background: #fff;
+        @include desktop-1024 {
+            margin-right: 24px;
+            width: 231px;
+            height: 234px;
+            flex-basis: 229px;
+
+            &_gsuite {
+                flex-basis: 481px;
+            }
+        }
+    }
+}
