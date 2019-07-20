@@ -3,7 +3,6 @@
 
 .header {
     height: 420px;
-    border-bottom: 1px solid;
 
     @include desktop-1024 {
         height: 665px;
