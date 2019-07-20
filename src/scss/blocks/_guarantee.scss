@@ -1,0 +1,39 @@
+.guarantee {
+    background: $grey_bg;
+    @include desktop-1024 {
+        height: 300px;
+    }
+
+    &__item-wrapper {
+        padding-top: 78px;
+        padding-bottom: 74px;
+        @include desktop-1024 {
+            height: 300px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        height: 156px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include desktop-1024 {
+            width: 33.33333%;
+            height: 190px;
+            margin-bottom: none;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        left: 20px;
+        top: 18px;
+        @include desktop-1024 {
+
+        }
+    }
+}
