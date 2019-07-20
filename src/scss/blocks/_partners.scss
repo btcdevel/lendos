@@ -1,0 +1,42 @@
+.partners {
+    background: $grey_bg;
+    height: 217px;
+    overflow-y: auto;
+
+    &__item-wrapper{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        height: 217px;
+        width: 960px;
+    }
+
+    &__item{
+        float: left;
+
+        &_mailru {
+            background: url(../../img/partners/item_mailru.svg) no-repeat;
+            width: 160px;
+            height: 33px;
+        }
+
+        &_group {
+            background: url(../../img/partners/item_group.svg) no-repeat;
+            width: 183px;
+            height: 72px;
+        }
+
+        &_abbyy {
+            background: url(../../img/partners/item_abbyy.svg) no-repeat;
+            width: 240px;
+            height: 120px;
+        }
+
+        &_avito {
+            background: url(../../img/partners/item_avito.svg) no-repeat;
+            width: 155px;
+            height: 46px;
+        }
+    }
+}
