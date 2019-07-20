@@ -6,6 +6,7 @@ $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica 
 @import 'base/reset';
 @import 'blocks/header';
 @import 'blocks/partners';
+@import 'blocks/promo';
 
 
 @font-face {
@@ -21,6 +22,12 @@ body {
   .l-rel {
     position: relative;
   }
+
+  .b-text {
+    font-size: 18px;
+    line-height: 24px;
+    color: $color_gefault;
+  }
   .container {
 
     padding: 0 24px;
@@ -30,11 +37,18 @@ body {
       margin-left: auto;
       margin-right: auto;
     }
-    // &_mobile-indents-none {
-    //   padding: 0;
-    //   @include desktop-1024 {
-    //     padding: 0 24px;
-    //   }
-    // }
+
+    &_mobile-indents-none {
+      padding: 0;
+      @include desktop-1024 {
+        padding: 0 24px;
+      }
+    }
+
+    &_desktop-indents-none {
+      @include desktop-1024 {
+        padding: none;
+      }
+    }
   }
 }
