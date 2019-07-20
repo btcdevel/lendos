@@ -1,6 +1,9 @@
 .cms {
-    height: 300px;
+    height: 445px;
     background: #fff;
+    @include desktop-1024 {
+        height: 300px;
+    }
 
     &__wrapper {
         padding-top: 58px;
