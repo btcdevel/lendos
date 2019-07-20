@@ -24,6 +24,7 @@
         margin-top: 60px;
         padding: 0 24px;
         @include desktop-1024 {
+            margin-top: 18px;
             width: 50%;
         }
     }
