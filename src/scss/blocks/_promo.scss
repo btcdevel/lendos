@@ -1,0 +1,104 @@
+.promo {
+    background: #fff;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        @include desktop-1024 {
+            flex-direction: row;
+            align-items: center;
+            height: 384px;
+        }
+
+        &_hands {
+            @include desktop-1024 {
+                height: 300px;
+                flex-direction: row-reverse;
+                align-items: center;
+                align-content: center;
+            }
+        }
+    }
+
+    &__cose {
+        margin-top: 60px;
+        padding: 0 24px;
+        @include desktop-1024 {
+            width: 50%;
+        }
+    }
+
+    &__cose-strong {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    &__cose-text {
+        font-size: 18px;
+        line-height: 24px;
+        color: $color_gefault;
+    }
+
+
+
+    &__image {
+        overflow: hidden;
+        @include desktop-1024 {
+            width: 61%;
+            overflow: unset;
+        }
+    }
+
+    &__image-lk {
+        background: url(../../img/promo/image-lk.svg) no-repeat;
+        background-position: unset;
+        height: 355px;
+        @include desktop-1024 {
+            background-position: center;
+        }
+    }
+
+    &__handshake {
+        height: 220px;
+        overflow: hidden;
+        @include desktop-1024 {
+            height: auto;
+            overflow: unset;
+            width: 46%;
+        }
+    }
+
+    &__handshake-img {
+        background: url(../../img/promo/handshake-img-mobile.svg) no-repeat;
+        background-position: top;
+        width: 100%;
+        height: 410.16px;
+        margin-top: 12px;
+        @include desktop-1024 {
+            background: url(../../img/promo/handshake-img.svg) no-repeat;
+            background-position: center;
+            width: 367.46px;
+            height: 502.39px;
+        }
+    }
+
+    &__always {
+        margin-top: 60px;
+        padding: 0 24px;
+        @include desktop-1024 {
+            width: 50%;
+            margin-top: 0;
+        }
+    }
+
+    &__always-strong {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    &__always-text {
+        font-size: 18px;
+        line-height: 24px;
+        color: $color_gefault;
+    }
+}
