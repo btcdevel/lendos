@@ -1,0 +1,9 @@
+<% var data = {
+  title: "Второй заголовок | Проект",
+  author: "btcdevel"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="container">Вторая страница.1</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

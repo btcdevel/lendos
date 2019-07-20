@@ -1,0 +1,107 @@
+@import 'base/variables';
+@import 'base/mixins';
+
+.header {
+    height: 420px;
+    border-bottom: 1px solid;
+
+    @include desktop-1024 {
+        height: 665px;
+    }
+
+    &__svg-logo {
+        position: absolute;
+        top: 12px;
+        left: 24px;
+        @include desktop-1024 {
+            top: 84px;
+            width: 123.63px;
+            height: 60px;
+        }
+    }
+
+    &__svg-man {
+        display: none;
+        @include desktop-1024 {
+            display: block;
+            background: url(../../img/header__svg-man.svg) no-repeat;
+            position: absolute;
+            width: 501.38px;
+            height: 510.86px;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &__wrapper {
+        padding-top: 96px;
+        @include desktop-1024 {
+            padding-top: 220px;
+            height: 665px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        color: $color_gefault;
+        font-size: 32px;
+        line-height: 36px;
+
+        @include desktop-1024 {
+            font-size: 54px;
+            line-height: 60px;
+        }
+    }
+
+    &__br-mob {
+        display: block;
+        @include desktop-1024 {
+            display: none;
+        }
+    }
+    &__br-desk {
+        display: none;
+        @include desktop-1024 {
+            display: block;
+        }
+    }
+
+    &__per-month {
+        font-size: 20px;
+        @include desktop-1024 {
+            font-size: 32px;
+        }
+    }
+
+    &__description {
+        font-size: 24px;
+        line-height: 30px;
+        color: #6A7287;
+        padding-top: 10px;
+        margin-bottom: 36px;
+    }
+
+    &__button {
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 24px;
+        text-align: center;
+        width: 240px;
+        height: 60px;
+        background: $button_bg;
+        border-radius: $button_radius;
+
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        span {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+}
