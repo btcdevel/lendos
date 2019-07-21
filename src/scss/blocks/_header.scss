@@ -2,7 +2,7 @@
 @import 'base/mixins';
 
 .header {
-    height: 420px;
+    height: 495px;
 
     @include desktop-1024 {
         height: 665px;
