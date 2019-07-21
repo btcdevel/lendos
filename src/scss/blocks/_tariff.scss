@@ -218,7 +218,10 @@
     }
 
     &__popup {
-        display: none;
+        // display: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: fixed;
         width: 100%;
         height: 100%;
@@ -226,13 +229,22 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: #ccc;
+        background: rgba(204, 204, 204, 0.3);
+        z-index: 1;
+
+        &_state_active {
+            display: flex;
+        }
     }
 
     &__popup-wrapper {
-        display: none;
+        position: relative;
+        width: 1106px;
+        height: 660px;
         padding: 48px;
         background: #fff;
+        box-shadow: 0px 4px 8px rgba(17, 56, 86, 0.1);
+        border-radius: 3px;
     }
 
     &__popup-title {
@@ -245,6 +257,99 @@
         border-bottom: 1px dashed #069DFA;
         padding-bottom: 2px;
         display: inline-block;
-        margin-bottom: 10px;
+        margin-bottom: 42px;
+    }
+
+    &__popup-close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 48px;
+        height: 48px;
+        background: url(../../img/tariff/icon-close.svg) no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    &__popup-desc {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 36px;
+        @include desktop-1024 {
+            flex-direction: row;
+            justify-content: space-between;
+
+            &_small-margin {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    &__popup-desc-item {
+        width: 100%;
+        @include desktop-1024 {
+            width: 210px;
+        }
+    }
+
+    &__popup-desc-text {
+        font-size: 15px;
+        line-height: 24px;
+        color: #9399AA;
+    }
+
+    &__popup-desc-value {
+        font-size: 15px;
+        line-height: 24px;
+        color: #364364;
+    }
+
+    &__popup-cms-list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 36px;
+        @include desktop-1024 {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__popup-cms-item {
+        background-position: center;
+        width: 72px;
+        height: 60px;
+        &_bitrix {
+            background: url(../../img/tariff/icon-bitrix.svg) no-repeat;
+        }
+
+        &_wp {
+            background: url(../../img/tariff/icon-wp.svg) no-repeat;
+        }
+
+        &_joomla {
+            background: url(../../img/tariff/icon-joomla.svg) no-repeat;
+        }
+
+        &_opencard {
+            background: url(../../img/tariff/icon-opencard.svg) no-repeat;
+        }
+
+        &_drupal {
+            background: url(../../img/tariff/icon-drupal.svg) no-repeat;
+        }
+
+        &_modx {
+            background: url(../../img/tariff/icon-modx.svg) no-repeat;
+        }
+
+        &_umi {
+            background: url(../../img/tariff/icon-umi.svg) no-repeat;
+        }
+
+        &_host {
+            background: url(../../img/tariff/icon-host.svg) no-repeat;
+        }
+        @include desktop-1024 {
+        }
     }
 }
