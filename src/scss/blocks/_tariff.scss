@@ -224,13 +224,18 @@
         justify-content: center;
         position: fixed;
         width: 100%;
-        height: 100%;
+        height: auto;
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
+
         background: rgba(204, 204, 204, 0.3);
         z-index: 1;
+
+        @include desktop-1024 {
+            height: 100%;
+            bottom: 0;
+        }
 
         &_state_active {
             display: flex;
@@ -239,12 +244,29 @@
 
     &__popup-wrapper {
         position: relative;
-        width: 1106px;
-        height: 660px;
-        padding: 48px;
+        padding: 30px;
         background: #fff;
         box-shadow: 0px 4px 8px rgba(17, 56, 86, 0.1);
         border-radius: 3px;
+        @include desktop-1024 {
+            padding: 48px;
+            height: 660px;
+            width: 1106px;
+        }
+    }
+
+    &__popup-content {
+        overflow-x: auto;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 150px;
+        @include desktop-1024 {
+            padding-bottom: 0;
+            overflow-x: unset;
+            height: auto;
+        }
     }
 
     &__popup-title {
@@ -299,15 +321,22 @@
     }
 
     &__popup-desc-value {
+        margin-bottom: 12px;
         font-size: 15px;
         line-height: 24px;
         color: #364364;
+        @include desktop-1024 {
+            margin-bottom: 0;
+        }
     }
 
     &__popup-cms-list {
         display: flex;
-        flex-direction: column;
         margin-bottom: 36px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+
         @include desktop-1024 {
             flex-direction: row;
             justify-content: space-between;
@@ -316,8 +345,13 @@
 
     &__popup-cms-item {
         background-position: center;
-        width: 72px;
         height: 60px;
+        width: 33%;
+        @include desktop-1024 {
+            width: 72px;
+            height: 60px;
+        }
+
         &_bitrix {
             background: url(../../img/tariff/icon-bitrix.svg) no-repeat;
         }
@@ -351,5 +385,77 @@
         }
         @include desktop-1024 {
         }
+    }
+
+    &__popup-footer {
+        display: flex;
+        flex-direction: column-reverse;
+        @include desktop-1024 {
+            flex-direction: row;
+        }
+    }
+
+    &__popup-footer-item {
+        width: 100%;
+
+        &_mod-action {
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            // justify-content: flex-end;
+            // align-items: flex-end;
+            @include desktop-1024 {
+                flex-direction: row;
+                margin-bottom: 0;
+            }
+        }
+        @include desktop-1024 {
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+    }
+
+    &__popup-price-wrapper {
+        margin-bottom: 12px;
+        margin-right: 36px;
+        font-size: 14px;
+        display: flex;
+        align-items: baseline;
+        letter-spacing: 0.03em;
+        @include desktop-1024 {
+            margin-bottom: 0;
+        }
+    }
+
+    &__popup-price-text {
+        font-size: 24px;
+    }
+
+    &__popup-button {
+        padding: 12px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 24px;
+        text-align: center;
+        height: 48px;
+        background: $button_bg;
+        border-radius: $button_radius;
+
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        span {
+            color: #fff;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: bold;
+        }
+    }
+
+    &__popup-price-mont {
+        font-size: 24px;
     }
 }
