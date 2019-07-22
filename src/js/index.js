@@ -4,29 +4,36 @@ import bootstrap from "bootstrap";
 
 jQuery(function() {
 
-  const $navListItem  = $('.b-nav__li');
-  const $navCloseIcon = $('.b-nav__dropdown-menu-close');
-  const $mobCloseIcon = $('.b-nav__mobile-menu-close');
-  const $navBurger    = $('.b-nav__burger');
+  const $tariffTag        = $('.tariff__tag');
+  const $tariffBlock      = $('.tariff__card-block');
+  const $tariffCardTitle  = $('.tariff__card-title');
+  const $tariffPopup      = $('.tariff__popup');
+  const $tariffPopupClose = $('.tariff__popup-close');
 
-  $navListItem.on('click', function() {
-    $navListItem.removeClass('b-nav__li_state-active');
-    $(this).addClass('b-nav__li_state-active');
-    $('.b-nav__dropdown-block').removeClass('b-nav__dropdown-block_state-active');
-    $( '[data-dropdown="' + $( this ).data('nav-item') + '"]' ).addClass('b-nav__dropdown-block_state-active');
+  $tariffTag.on('click', function() {
+    $tariffTag.removeClass('tariff__tag_state_active');
+    $( this ).addClass('tariff__tag_state_active');
+
+    $tariffBlock.addClass('tariff__card-block_state_hide');
+    $tariffBlock.removeClass('tariff__card-block_state_active');
+
+    $( '[data-block="' + $( this ).data('tag') + '"]' ).removeClass('tariff__card-block_state_hide');
+    $( '[data-block="' + $( this ).data('tag') + '"]' ).addClass('tariff__card-block_state_active');
+
+    $( '[data-popup="' + $( this ).data('') + '"]' ).addClass('tariff__card-block_state_active');
   });
 
-  $navCloseIcon.on('click', function() {
-    $(this).parents('.b-nav__dropdown-block').removeClass('b-nav__dropdown-block_state-active');
-    $navListItem.removeClass('b-nav__li_state-active');
+  $tariffCardTitle.on('click', function() {
+
+    console.log($( this ).data('link'));
+    $tariffPopup.removeClass('tariff__popup_state_active');
+    $( '[data-popup="' + $( this ).data('link') + '"]' ).addClass('tariff__popup_state_active');
   });
 
-  $navBurger.on('click', function() {
-    $('.b-nav__ul').addClass('b-nav__ul_state-active');
-  });
+  $tariffPopupClose.on('click', function() {
 
-  $mobCloseIcon.on('click', function() {
-    $('.b-nav__ul').removeClass('b-nav__ul_state-active');
+    $tariffPopup.removeClass('tariff__popup_state_active');
+
   });
 
 });
