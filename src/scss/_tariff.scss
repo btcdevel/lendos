@@ -283,7 +283,7 @@
         border-radius: 3px;
         @include desktop-1024 {
             padding: 48px;
-            height: 660px;
+            height: auto;
             width: 1106px;
         }
     }
