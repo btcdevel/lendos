@@ -23,7 +23,7 @@
         display: none;
         @include desktop-1024 {
             display: block;
-            background: url(../../img/header__svg-man.svg) no-repeat;
+            background: url(../img/header__svg-man.svg) no-repeat;
             position: absolute;
             width: 501.38px;
             height: 510.86px;
@@ -81,6 +81,7 @@
     }
 
     &__button {
+        cursor: pointer;
         padding: 12px;
         display: flex;
         justify-content: center;

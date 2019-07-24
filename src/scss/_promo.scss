@@ -51,7 +51,7 @@
     }
 
     &__image-lk {
-        background: url(../../img/promo/image-lk.svg) no-repeat;
+        background: url(../img/promo/image-lk.svg) no-repeat;
         background-position: unset;
         height: 355px;
         @include desktop-1024 {
@@ -70,13 +70,13 @@
     }
 
     &__handshake-img {
-        background: url(../../img/promo/handshake-img-mobile.svg) no-repeat;
+        background: url(../img/promo/handshake-img-mobile.svg) no-repeat;
         background-position: top;
         width: 100%;
         height: 410.16px;
         margin-top: 12px;
         @include desktop-1024 {
-            background: url(../../img/promo/handshake-img.svg) no-repeat;
+            background: url(../img/promo/handshake-img.svg) no-repeat;
             background-position: center;
             width: 367.46px;
             height: 502.39px;
