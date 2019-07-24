@@ -10,13 +10,13 @@
     }
 
     &__icons {
-        background: url(../../img/cms/icons.svg) no-repeat;
+        background: url(../img/cms/icons.svg) no-repeat;
         background-position: top;
         width: 100%;
         height: 280px;
         margin-top: 20px;
         @include desktop-1024 {
-            background: url(../../img/cms/icons-desktop.svg) no-repeat;
+            background: url(../img/cms/icons-desktop.svg) no-repeat;
             margin-top: 48px;
             height: 60px;
         }

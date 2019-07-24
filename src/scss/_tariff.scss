@@ -206,7 +206,7 @@
         top: 5px;
         width: 16px;
         height: 24px;
-        background: url(../../img/tariff/icon-plus.svg) no-repeat;
+        background: url(../img/tariff/icon-plus.svg) no-repeat;
         background-position: unset;
     }
 
@@ -321,7 +321,7 @@
         top: 30px;
         width: 48px;
         height: 48px;
-        background: url(../../img/tariff/icon-close.svg) no-repeat;
+        background: url(../img/tariff/icon-close.svg) no-repeat;
         background-position: center;
         cursor: pointer;
     }
@@ -386,35 +386,35 @@
         }
 
         &_bitrix {
-            background: url(../../img/tariff/icon-bitrix.svg) no-repeat;
+            background: url(../img/tariff/icon-bitrix.svg) no-repeat;
         }
 
         &_wp {
-            background: url(../../img/tariff/icon-wp.svg) no-repeat;
+            background: url(../img/tariff/icon-wp.svg) no-repeat;
         }
 
         &_joomla {
-            background: url(../../img/tariff/icon-joomla.svg) no-repeat;
+            background: url(../img/tariff/icon-joomla.svg) no-repeat;
         }
 
         &_opencard {
-            background: url(../../img/tariff/icon-opencard.svg) no-repeat;
+            background: url(../img/tariff/icon-opencard.svg) no-repeat;
         }
 
         &_drupal {
-            background: url(../../img/tariff/icon-drupal.svg) no-repeat;
+            background: url(../img/tariff/icon-drupal.svg) no-repeat;
         }
 
         &_modx {
-            background: url(../../img/tariff/icon-modx.svg) no-repeat;
+            background: url(../img/tariff/icon-modx.svg) no-repeat;
         }
 
         &_umi {
-            background: url(../../img/tariff/icon-umi.svg) no-repeat;
+            background: url(../img/tariff/icon-umi.svg) no-repeat;
         }
 
         &_host {
-            background: url(../../img/tariff/icon-host.svg) no-repeat;
+            background: url(../img/tariff/icon-host.svg) no-repeat;
         }
         @include desktop-1024 {
         }
