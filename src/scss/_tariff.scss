@@ -65,33 +65,29 @@
         width: 100%;
 
         @include desktop-1024 {
-            // visibility: hidden;
-            // opacity: 0;
-            // transform: translateX(-40px);
-            // display: flex;
             transition: $transition_default ease-in-out;
-            // transform: translateX(-40px);
         }
 
 
         &_state_hide {
             display: none;
             @include desktop-1024 {
-                // transform: translateX(-40px);
-                // visibility: hidden;
-                // opacity: 0;
+
             }
         }
 
         &_state_active {
-            display: flex;
-            flex-wrap:wrap;
+            display: block;
+            // display: flex;
+            // flex-wrap:wrap;
             @include desktop-1024 {
-                // visibility: visible;
-                // opacity: 1;
-                // transform: translateX(0);
             }
         }
+    }
+
+    &__card-wrapper {
+        display: flex;
+        flex-wrap:wrap;
     }
 
     &__card-about-title {
@@ -102,6 +98,12 @@
         letter-spacing: -0.01em;
         color: #364364;
         margin-bottom: 24px;
+    }
+
+    &__card-about-subtitle {
+        color: #364364;
+        margin-bottom: 12px;
+        display: inline-block;
     }
 
     &__card-about-title-br {
