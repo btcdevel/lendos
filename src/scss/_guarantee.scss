@@ -36,4 +36,12 @@
 
         }
     }
+
+    &__text {
+        min-height: 85px;
+        margin-top: 20px;
+        @include desktop-1024 {
+
+        }
+    }
 }
