@@ -1,4 +1,4 @@
-.tariff {
+.b-tariff {
     background: #fff;
     // height: 200px;
 
@@ -65,33 +65,29 @@
         width: 100%;
 
         @include desktop-1024 {
-            // visibility: hidden;
-            // opacity: 0;
-            // transform: translateX(-40px);
-            // display: flex;
             transition: $transition_default ease-in-out;
-            // transform: translateX(-40px);
         }
 
 
         &_state_hide {
             display: none;
             @include desktop-1024 {
-                // transform: translateX(-40px);
-                // visibility: hidden;
-                // opacity: 0;
+
             }
         }
 
         &_state_active {
-            display: flex;
-            flex-wrap:wrap;
+            display: block;
+            // display: flex;
+            // flex-wrap:wrap;
             @include desktop-1024 {
-                // visibility: visible;
-                // opacity: 1;
-                // transform: translateX(0);
             }
         }
+    }
+
+    &__card-wrapper {
+        display: flex;
+        flex-wrap:wrap;
     }
 
     &__card-about-title {
@@ -102,6 +98,12 @@
         letter-spacing: -0.01em;
         color: #364364;
         margin-bottom: 24px;
+    }
+
+    &__card-about-subtitle {
+        color: #364364;
+        margin-bottom: 12px;
+        display: inline-block;
     }
 
     &__card-about-title-br {
@@ -231,6 +233,8 @@
         line-height: 24px;
         text-align: center;
         height: 48px;
+        border: none;
+        width: 100%;
         background: $button_bg;
         border-radius: $button_radius;
 
@@ -333,6 +337,7 @@
         @include desktop-1024 {
             flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 16px;
 
             &_small-margin {
                 margin-bottom: 18px;
@@ -438,6 +443,7 @@
             // justify-content: flex-end;
             // align-items: flex-end;
             @include desktop-1024 {
+                display: flex;
                 flex-direction: row;
                 margin-bottom: 0;
             }
@@ -472,6 +478,7 @@
         line-height: 24px;
         text-align: center;
         height: 48px;
+        border: none;
         background: $button_bg;
         border-radius: $button_radius;
 
