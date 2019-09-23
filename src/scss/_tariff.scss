@@ -1,4 +1,4 @@
-.tariff {
+.b-tariff {
     background: #fff;
     // height: 200px;
 
@@ -443,6 +443,7 @@
             // justify-content: flex-end;
             // align-items: flex-end;
             @include desktop-1024 {
+                display: flex;
                 flex-direction: row;
                 margin-bottom: 0;
             }
@@ -478,7 +479,6 @@
         text-align: center;
         height: 48px;
         border: none;
-        width: 100%;
         background: $button_bg;
         border-radius: $button_radius;
 
